@@ -1,38 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Vampiro+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
+
 .App {
+  margin: 0;
+  height: 100%;
+  background: #FEFBE6;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column
+}
+
+.header {
+  width: 100%;
+}
+
+.arrow-back {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
+.logo {
+  color: #000;
+  outline: none;
+  font-size: 96px;
+  font-family: 'Vampiro One', cursive;
+
+  text-align: center;
+  top: 20px;
+}
+
+.F {
+  color: #ffd900;
+}
+
+.subtitle p {
+  font-size: 32px;
+  font-family: 'Happy Monkey', cursive;
+
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.container {
+  width: 100%;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 650px) {
+  .logo {
+    font-size: 32px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .subtitle p {
+    font-size: 24px;
   }
 }

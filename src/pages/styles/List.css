@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+.search {
+  width: 60%;
+  margin: 10px;
+  border-bottom: 2px solid #000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+input:focus {
+  outline: none;
+}
+
+.input-search {
+  width: 95%;
+
+  background: transparent;
+  border: transparent;
+  font-size: 32px;
+}
+
+.cards-container {
+  width: 80%;
+  margin: 20px 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  width: 150px;
+  height: 150px;
+  border-radius: 25px;
+  background: rgb(99, 99, 99);
+
+  margin: 10px;
+
+  display: flex;
+  text-align: center;
+  text-decoration: none;
+  flex-direction: column;
+  justify-content: center;
+
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.card:hover {
+  width: 155px;
+  height: 155px;
+
+  transition: width .2s, height .2s;
+}
+
+.card p {
+  color: #FFF;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+
+  user-select: none;
+}
+
+.create-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  z-index: 10;
+
+  width: 64px;
+  height: 64px;
+  background: #ffd900;
+  border: none;
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 0.2s;
+}
+
+.create-button:hover {
+  background: #f1cd00;
+}
+
+@media screen and (max-width: 650px) {
+  .input-search {
+    font-size: 16px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+}
