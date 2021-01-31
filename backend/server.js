@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 4000;
 app.use(cors());
 app.use(express.json());
 
-const uri = process.env.ATLAS_URI;
+const uri = "mongodb+srv://admin:1war9p9ten7@cluster0.uwxvb.mongodb.net/flyrics?retryWrites=true&w=majority";
 
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
 
