@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const db = axios.create({
-  baseURL: 'http://localhost:4000/musics',
+  baseURL: 'https://flyrics.herokuapp.com/musics',
 });
 
 export default db;
