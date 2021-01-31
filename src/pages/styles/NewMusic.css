@@ -55,6 +55,7 @@ span.validation-text {
 
 .save-button {
   height: 50px;
+  margin-bottom: 10px;
   border: none;
   background: #FFBF00;
   border-radius: 50px;
