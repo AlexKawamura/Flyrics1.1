@@ -1,7 +1,7 @@
 const router = require('express').Router();
 let Music = require('../models/music.model');
 
-router.route('').get((req, res) => {
+router.route('/').get((req, res) => {
   Music.find()
     .then(musics => res.json(musics))
     .catch(err => res.status(400).json(`Error: ${err}`));

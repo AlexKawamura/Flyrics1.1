@@ -11,6 +11,9 @@ const PORT = process.env.PORT || 4000;
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../build')));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../build'))
+})
 
 const uri = "mongodb+srv://admin:1war9p9ten7@cluster0.uwxvb.mongodb.net/flyrics?retryWrites=true&w=majority";
 
