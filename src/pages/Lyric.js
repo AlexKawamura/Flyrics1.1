@@ -7,7 +7,7 @@ function Lyric() {
   const [music, setMusic] = useState();
 
   useEffect(() => {
-    db.get(`${params.id}`).then(res => {
+    db.get(`/musics/${params.id}`).then(res => {
       setMusic(res.data);
     });
   }, [params.id]);

@@ -19,7 +19,7 @@ function NewMusic() {
       'lyric': lyric,
     };
 
-    await db.post('/new', data);
+    await db.post('/musics/new', data);
 
     document.querySelector('form').reset();
   }
