@@ -11,7 +11,7 @@ function List() {
   useEffect(() => {
     db.get('/musics').then(res => {
       setMusics(res.data);
-    });
+    }).catch((err) => console.log(err));
   }, []);
 
   return (
