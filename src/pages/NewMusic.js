@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { toast } from 'react-toastify';
 
 import db from '../services/db';
 
@@ -22,11 +21,34 @@ function NewMusic() {
     };
 
     await db.post('/musics/new', data)
-    .then(() => {
-      toast("Default notification!")
-    });
+      .then(() => alert('Nova música criada com sucesso!'))
+      .catch(err => alert(`Erro ao cadastrar nova música\n${err}`));
 
     document.querySelector('form').reset();
+  }
+
+  function validateInput(id, value) {
+    const input = document.getElementById(id);
+
+    if (value) {
+      input.style.border = "none";
+
+      switch(id) {
+        case 'title-input':
+          setTitle(value);
+          break;
+        case 'author-input':
+          setBand(value);
+          break;
+        case 'lyric-textarea':
+          setLyric(value);
+          break;
+        default:
+            break;
+      }
+    } else {
+      input.style.border = "2px solid red";
+    }
   }
 
   return (
@@ -41,7 +63,7 @@ function NewMusic() {
             className="input-title"
             id="title-input"
             type="text"
-            onChange={ev => setTitle(ev.target.value)}  
+            onChange={ev => validateInput(ev.target.id, ev.target.value)}  
           />
         </div>
         <div className="input-container">
@@ -50,7 +72,7 @@ function NewMusic() {
             className="input-author"
             id="author-input"
             type="text"
-            onChange={ev => setBand(ev.target.value)}
+            onChange={ev => validateInput(ev.target.id, ev.target.value)}
           />
         </div>
         <div className="input-container">
@@ -68,7 +90,7 @@ function NewMusic() {
             className="textarea-lyric"
             id="lyric-textarea"
             type="text"
-            onChange={ev => setLyric(ev.target.value)}
+            onChange={ev => validateInput(ev.target.id, ev.target.value)}
           />
         </div>
 
