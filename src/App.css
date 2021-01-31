@@ -2,8 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
 
 .App {
-  margin: 0;
-  height: 100%;
   background: #FEFBE6;
 
   display: flex;
