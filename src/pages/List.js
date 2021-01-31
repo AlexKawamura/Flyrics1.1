@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { FiPlus, FiSearch } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import db from '../services/db';
+import axios from 'axios';
 
 import './styles/List.css';
 
@@ -9,7 +10,7 @@ function List() {
   const [musics, setMusics] = useState([]);
 
   useEffect(() => {
-    db.get('/musics').then(res => {
+    axios.get('/musics').then(res => {
       setMusics(res.data);
     }).catch((err) => console.log(err));
   }, []);
