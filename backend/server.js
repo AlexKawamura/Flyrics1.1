@@ -16,7 +16,7 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../build'))
 })
 
-const uri = "mongodb+srv://admin:1war9p9ten7@cluster0.uwxvb.mongodb.net/flyrics?retryWrites=true&w=majority";
+const uri = process.env.ATLAS_URI;
 
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true, useFindAndModify: false });
 
