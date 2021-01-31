@@ -9,7 +9,7 @@ function List() {
   const [musics, setMusics] = useState([]);
 
   useEffect(() => {
-    db.get('/').then(res => {
+    db.get('/musics/').then(res => {
       setMusics(res.data);
     });
   }, []);
