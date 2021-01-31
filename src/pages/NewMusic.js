@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { toast } from 'react-toastify';
+
 import db from '../services/db';
 
 import './styles/NewMusic.css';
@@ -19,7 +21,10 @@ function NewMusic() {
       'lyric': lyric,
     };
 
-    await db.post('/musics/new', data);
+    await db.post('/musics/new', data)
+    .then(() => {
+      toast("Default notification!")
+    });
 
     document.querySelector('form').reset();
   }
