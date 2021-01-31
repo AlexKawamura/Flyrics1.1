@@ -22,9 +22,9 @@ function Lyric() {
         <p>{music.title}</p>
       </div>
       <div className="lyric">
-        <p>
+        <pre>
           {music.lyric}
-        </p>
+        </pre>
       </div>
     </div>
   )
