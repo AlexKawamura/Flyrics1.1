@@ -19,13 +19,13 @@
     "react-scripts": "4.0.1",
     "web-vitals": "^0.2.4"
   },
-  "main": "backend/server.js",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "nodemon backend/server.js"
+    "server": "node backend/server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build"
   },
   "eslintConfig": {
     "extends": [
