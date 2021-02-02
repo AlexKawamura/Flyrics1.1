@@ -1,0 +1,68 @@
+.lyric-container {
+  width: 100%;
+}
+
+.kanjis {
+  top: 0;
+  width: 15vw;
+  max-height: 150vh;
+  padding: 20px;
+
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  flex-wrap: wrap;
+  
+  font-size: 30px;
+  background-color: black;
+  color: white;
+  border-radius: 0 0 10px 0;
+  
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+span.kanji {
+  cursor: pointer;
+
+  transition: font-size 0.2s;
+}
+
+span.kanji:hover {
+  font-size: 40px;
+}
+
+.lyric {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.lyric {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 650px) {
+  .kanjis {
+    top: auto;
+    bottom: 0;
+    width: 90vw;
+    max-height: 10vh;
+    position: fixed;
+    border-radius: 0;
+
+    font-size: 10px;
+
+    flex-direction: row;
+  }
+
+  .lyric {
+    font-size: 10px;
+
+    margin-bottom: 100px;
+  }
+
+  span.kanji:hover {
+    font-size: 12px;
+  }
+}
