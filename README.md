@@ -42,8 +42,14 @@ app.get('*', (req, res) => {
 
 `ATLAS_URI=mongodb+srv://<username>:<password>@cluster0.uwxvb.mongodb.net/<dbname>?retryWrites=true&w=majority`
 
+ * `<username>` = nome do usuário administrador criado ao se conectar ao cluster
+ 
+ * `<password>` = senha criada ao se conectar ao cluster
+ 
+ * `<dbname>` = nome do banco
+
 ## Iniciando o front-end
 `npm start`
 
 ## Iniciando o banco
-`node ./backend/server.js`
+`node ./backend/server.js` ou `npm server`
