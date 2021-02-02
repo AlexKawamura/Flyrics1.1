@@ -1,6 +1,6 @@
 # Ferramentas Necessárias
 * Para executar o projeto é preciso ter instalado na máquina [NodeJS](https://nodejs.org/en/).
-* Possuir uma conta em MongoDB Atlas:
+* Possuir uma conta em [MongoDB Atlas](https://www.mongodb.com/cloud/atlas):
   * [Criar um Cluster](https://docs.atlas.mongodb.com/tutorial/create-new-cluster);
   * Conectar ao Cluster:
     1. Clique no botão "Connect".
