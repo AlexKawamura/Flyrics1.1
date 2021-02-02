@@ -6,7 +6,8 @@
     1. Clique no botão "Connect".
     2. Escolha a opção "Connect your application".
     3. Será apresentado uma string para conectar ao cluster:
-      * `mongodb+srv://<username>:<password>@cluster0.uwxvb.mongodb.net/<dbname>?retryWrites=true&w=majority)`
+    
+    `mongodb+srv://<username>:<password>@cluster0.uwxvb.mongodb.net/<dbname>?retryWrites=true&w=majority)`
 
 # Execução
 Instale as dependências: `npm install`
