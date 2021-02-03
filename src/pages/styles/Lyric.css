@@ -13,7 +13,7 @@ a.link:hover {
 
 .kanjis {
   top: 0;
-  width: 14vw;
+  width: 15vw;
   padding: 20px;
 
   position: absolute;
@@ -44,7 +44,7 @@ span.kanji:hover {
   display: flex;
   text-align: center;
   justify-content: center;
-  
+
   font-size: 18px;
 }
 
