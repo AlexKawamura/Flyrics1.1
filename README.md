@@ -48,7 +48,7 @@ const db = axios.create({
  * Substitua os campos por:
    * `<username>` = nome do usuário administrador criado ao se conectar ao cluster 
    * `<password>` = senha criada ao se conectar ao cluster
-   * `<dbname>` = nome do banco
+   * `<dbname>` = nome do banco (invente um)
 
 ## Iniciando o front-end
 `npm start`
