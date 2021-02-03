@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { FiPlus, FiSearch } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
+import MusicCard from '../components/MusicCard';
 import db from '../services/db';
 
 import './styles/List.css';
@@ -29,12 +30,7 @@ function List() {
 
       <div className="cards-container">
         {musics.map(music => {
-          return (
-            <Link key={music._id} to={`/lyric/${music._id}`} className="card">
-              <p className="music-title">{music.title}</p>
-              <p className="band-name">{music.band}</p>
-            </Link>
-          );
+          return <MusicCard key={music._id} musicInfo={music} />
         })}
       </div>
 
