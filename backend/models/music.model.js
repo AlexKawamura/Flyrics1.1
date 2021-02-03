@@ -6,7 +6,8 @@ const musicSchema = new Schema({
   title: { type: String, required: true },
   band: { type: String, required: true },
   album: { type: String },
-  lyric: { type: String, required: true}
+  lyric: { type: String, required: true},
+  link: {type: String}
 }, {
   timestamps: true,
 });

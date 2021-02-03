@@ -18,12 +18,14 @@ router.route('/new').post((req, res) => {
   const band = req.body.band;
   const album = req.body.album;
   const lyric = req.body.lyric;
+  const link = req.body.link;
 
   const newMusic = new Music({
     title,
     band,
     album,
     lyric,
+    link
   });
 
   newMusic.save()

@@ -1,3 +1,12 @@
+a.link {
+  color: #000;
+  text-decoration: none;
+}
+
+a.link:hover {
+  color: #ffd900;
+}
+
 .lyric-container {
   width: 100%;
 }
@@ -35,9 +44,7 @@ span.kanji:hover {
   display: flex;
   text-align: center;
   justify-content: center;
-}
-
-.lyric {
+  
   font-size: 18px;
 }
 
