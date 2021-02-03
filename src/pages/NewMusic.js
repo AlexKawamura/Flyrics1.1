@@ -9,6 +9,7 @@ function NewMusic() {
   const [band, setBand] = useState('');
   const [album, setAlbum] = useState('');
   const [lyric, setLyric] = useState('');
+  const [link, setLink] = useState('');
 
   async function handleFormSubmit(event) {
     event.preventDefault();
@@ -18,6 +19,7 @@ function NewMusic() {
       'band': band,
       'album': album,
       'lyric': lyric,
+      'link': link
     };
 
     await db.post('/musics/new', data)
@@ -82,6 +84,15 @@ function NewMusic() {
             id="album-input"
             type="text"
             onChange={ev => setAlbum(ev.target.value)}
+          />
+        </div>
+        <div className="input-container">
+          <label className="label-link" htmlFor="link-input">Link de vídeo:</label>
+          <input
+            className="input-link"
+            id="link-input"
+            type="text"
+            onChange={ev => setLink(ev.target.value)}
           />
         </div>
         <div className="input-container">

@@ -22,6 +22,18 @@ function Lyric() {
     return 'Loading...';
   }
 
+  function showVideoLink() {
+    if (music.link) {
+      return (
+        <a className="link" href={music.link} target="_blank">
+          <p>Vídeo</p>
+        </a>
+      );
+    } else {
+      return null;
+    }
+  }
+
   return (
     <div className="lyric-container">
       <div className="kanjis">
@@ -33,6 +45,7 @@ function Lyric() {
       </div>
       <div className="subtitle">
         <p>{music.title} - {music.band}</p>
+        {showVideoLink()}
       </div>
       <div className="lyric">
         <pre>
