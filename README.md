@@ -37,10 +37,10 @@ const db = axios.create({
 
 * Dentro de `backend\server.js` comente as seguintes linhas:
 ```
-app.use(express.static(path.join(__dirname, '../build')));
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../build'))
-})
+// app.use(express.static(path.join(__dirname, '../build')));
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '../build'))
+// })
 ```
 * Crie um arquivo `.env` dentro de `backend` e adicione:
 
