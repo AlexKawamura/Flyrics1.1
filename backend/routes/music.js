@@ -10,7 +10,7 @@ router.route('/').get((req, res) => {
 router.route('/:id').get((req, res) => {
   Music.findById(req.params.id)
     .then(music => res.json(music))
-    .catch(err => console.log(`Error: ${err}`));
+    .catch(err => res.status(400).json(`Error: ${err}`));
 });
 
 router.route('/new').post((req, res) => {
