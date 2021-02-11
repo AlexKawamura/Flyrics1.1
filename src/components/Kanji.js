@@ -19,16 +19,8 @@ function Kanji(props) {
     <Tooltip
       html={(
         <div>
-          <p><b>Meanings:</b> 
-            {meanings.map(m => {
-              return ` ${m},`
-            })}
-          </p>
-          <p><b>Readings:</b>
-            {readings.map(r => {
-              return ` ${r},`
-            })}
-          </p>
+          <p><b>Meanings: </b> {meanings.join(', ')}</p>
+          <p><b>Readings: </b>{readings.join(', ')}</p>
         </div>
       )}
       position="right"
