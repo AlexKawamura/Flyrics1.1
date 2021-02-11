@@ -1,3 +1,6 @@
+# Protótipo
+https://www.figma.com/file/TOwvnlFf0A35PtbLnQCtUW/Flyrics?node-id=0%3A1
+
 # Ferramentas Necessárias
 * Para executar o projeto é preciso ter instalado na máquina [NodeJS](https://nodejs.org/en/).
 * Possuir uma conta em [MongoDB Atlas](https://www.mongodb.com/cloud/atlas):
@@ -7,7 +10,7 @@
     2. Escolha a opção "Connect your application".
     3. Será apresentado uma string para conectar ao cluster:
     
-    `mongodb+srv://<username>:<password>@cluster0.uwxvb.mongodb.net/<dbname>?retryWrites=true&w=majority)`
+    `mongodb+srv://<username>:<password>@cluster0.uwxvb.mongodb.net/<dbname>?retryWrites=true&w=majority`
 
 # Execução
 Instale as dependências: `npm install`
@@ -34,20 +37,18 @@ const db = axios.create({
 
 * Dentro de `backend\server.js` comente as seguintes linhas:
 ```
-app.use(express.static(path.join(__dirname, '../build')));
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../build'))
-})
+// app.use(express.static(path.join(__dirname, '../build')));
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '../build'))
+// })
 ```
 * Crie um arquivo `.env` dentro de `backend` e adicione:
 
 `ATLAS_URI=mongodb+srv://<username>:<password>@cluster0.uwxvb.mongodb.net/<dbname>?retryWrites=true&w=majority`
-
- * `<username>` = nome do usuário administrador criado ao se conectar ao cluster
- 
- * `<password>` = senha criada ao se conectar ao cluster
- 
- * `<dbname>` = nome do banco
+ * Substitua os campos por:
+   * `<username>` = nome do usuário administrador criado ao se conectar ao cluster 
+   * `<password>` = senha criada ao se conectar ao cluster
+   * `<dbname>` = nome do banco (invente um)
 
 ## Iniciando o front-end
 `npm start`
