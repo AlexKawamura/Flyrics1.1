@@ -2,6 +2,8 @@
 
 https://flyrics.herokuapp.com/
 
+Site desenvolvido com o intuito de aprender o significado, palavras e escrita de Kanjis que aparecem nas letras de músicas japonesas.
+
 # Protótipo
 https://www.figma.com/file/TOwvnlFf0A35PtbLnQCtUW/Flyrics?node-id=0%3A1
 
